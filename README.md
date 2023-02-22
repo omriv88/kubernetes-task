@@ -19,8 +19,7 @@ Deploy a new container of SuperSet and airflow application with service
 - 3 
 - 3.1 ![image](https://user-images.githubusercontent.com/113102456/220575952-15b9435e-71b7-435b-a499-2ac31a3925e1.png)
 - 3.2 ![image](https://user-images.githubusercontent.com/113102456/220576015-ab5a3cb5-1aad-4bd9-bbfd-24727ed9c312.png)
-- 4 
-- Deploy:
+- 4 Deploy:
 - kubectl create deployment airflow --image=puckel/docker-airflow
 - Expose:
 - kubectl expose deployment airflow --type=NodePort --port=8088
