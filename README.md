@@ -28,3 +28,6 @@ Deploy a new container of SuperSet and airflow application with service
   - helm install --name my-release stable/jenkins
   - kubectl get svc my-release-jenkins -o=jsonpath='{.spec.ports[?(@.port==8080)].nodePort}'
   - printf $(kubectl get secret --namespace default my-release-jenkins -o jsonpath="{.data.jenkins-admin-password}" | base64 --decode);echo
+  - ![image](https://user-images.githubusercontent.com/113102456/211533444-a1578a77-70b5-4dd7-8b82-d46d77daad90.png)
+  - ![image](https://user-images.githubusercontent.com/113102456/211533545-fc8cbbd3-b571-4797-9de5-b07998bc660e.png)
+  - ![image](https://user-images.githubusercontent.com/113102456/211533716-82ba78b6-2c3b-47a0-8cf1-dc9d21de4334.png)
