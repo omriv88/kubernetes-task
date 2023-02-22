@@ -1,0 +1,7 @@
+- kubectl create deployment superset --image=amancevice/superset
+- kubectl expose deployment superset --type=NodePort --port=8088
+- kubectl create deployment airflow --image=puckel/docker-airflow
+- kubectl expose deployment airflow --type=NodePort --port=8088
+- helm install --name my-release stable/jenkins
+- kubectl get svc my-release-jenkins -o=jsonpath='{.spec.ports[?(@.port==8080)].nodePort}'
+- printf $(kubectl get secret --namespace default my-release-jenkins -o jsonpath="{.data.jenkins-admin-password}" | base64 --decode);echo
