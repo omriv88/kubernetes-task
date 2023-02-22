@@ -24,4 +24,7 @@ Deploy a new container of SuperSet and airflow application with service
 - kubectl create deployment airflow --image=puckel/docker-airflow
 - 4.2 Expose:
 - kubectl expose deployment airflow --type=NodePort --port=8088
-- 5
+- 5 
+  - helm install --name my-release stable/jenkins
+  - kubectl get svc my-release-jenkins -o=jsonpath='{.spec.ports[?(@.port==8080)].nodePort}'
+  - printf $(kubectl get secret --namespace default my-release-jenkins -o jsonpath="{.data.jenkins-admin-password}" | base64 --decode);echo
