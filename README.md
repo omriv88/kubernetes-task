@@ -17,13 +17,13 @@ Deploy a new container of SuperSet and airflow application with service
 ![image](https://user-images.githubusercontent.com/113102456/211503621-674e65c0-ac2d-4ad5-b709-13d95f9bb973.png)
 ![image](https://user-images.githubusercontent.com/113102456/211503674-e9336d2d-70cd-4a9e-bcf7-0ec681097ae8.png)
 - 3 
-- 3.1 ![image](https://user-images.githubusercontent.com/113102456/220575952-15b9435e-71b7-435b-a499-2ac31a3925e1.png)
-- 3.2 ![image](https://user-images.githubusercontent.com/113102456/220576015-ab5a3cb5-1aad-4bd9-bbfd-24727ed9c312.png)
+  - 3.1 ![image](https://user-images.githubusercontent.com/113102456/220575952-15b9435e-71b7-435b-a499-2ac31a3925e1.png)
+  - 3.2 ![image](https://user-images.githubusercontent.com/113102456/220576015-ab5a3cb5-1aad-4bd9-bbfd-24727ed9c312.png)
 - 4
-- 4.1 Deploy:
-- kubectl create deployment airflow --image=puckel/docker-airflow
-- 4.2 Expose:
-- kubectl expose deployment airflow --type=NodePort --port=8088
+  - 4.1 Deploy:
+   - kubectl create deployment airflow --image=puckel/docker-airflow
+  - 4.2 Expose:
+   - kubectl expose deployment airflow --type=NodePort --port=8088
 - 5 
   - helm install --name my-release stable/jenkins
   - kubectl get svc my-release-jenkins -o=jsonpath='{.spec.ports[?(@.port==8080)].nodePort}'
